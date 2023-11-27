@@ -1,0 +1,144 @@
+:root{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    --primary-color: rgba(232, 102, 236);   
+    --default-color: #fff; 
+    --bg-color: rgb(64, 64, 70);
+    --border-radius: 0.4rem;
+
+    /*--------------------- padding ---------------------*/
+    --padding: 0.5rem;
+    /*--------------------- font sizes ---------------------*/
+   --fs-header: calc(0.80rem + 1vw);
+   --fs-header-table: calc(0.48rem + 1vw);
+   --fs-header-desktop: calc(0.15rem + 1vw);
+   --fs-code-card: calc(0.78rem + 1vw);
+   --fs-code-card-tablet:  calc(0.57em + 1vw);
+   --fs-code-card-desktop: calc(0.18rem + 1vw);
+   --fs-footer: calc(1em + 1vw);
+  
+
+
+}
+::selection{
+    background: #33c599;
+}
+body{
+    color: var(--default-color);
+    background-color: var(--bg-color);
+    line-height: 1.5;
+}
+header{
+    padding-inline:var(--padding);
+    text-align: center;
+    
+}
+header h1{
+    font-size: 3.1em;
+    color: var(--primary-color);
+    line-height: 1.1;
+    margin-bottom: 0;
+}
+main{
+    display: grid;
+    margin-block: 3.0rem;
+    row-gap: 2rem;
+}
+.code-card{
+    border: 2px dashed var(--default-color);
+    padding-inline: var(--padding);
+    position: relative;
+    padding-top: 1.5em; /*lines wrap, so need adjusting height*/
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-color);
+}
+.code-card:last-child{
+    padding-top: 4.0em;
+}
+.code-card:hover, .code-card:hover .card-header {
+    box-shadow: inset 0px 0px 08px rgba(232, 102, 236, 1), 
+                      0px 0px 15px rgba(232, 102, 236, 1);
+}
+.code-card .card-header, .code{
+    border-radius: var(--border-radius);
+}
+.code-card .card-header{
+    border: 2px solid var(--default-color);
+    position: absolute;
+    top: calc(-0.83em - 1rem) ;
+    left: 0.5rem;
+    right: 0.5rem;
+    background-color: var(--bg-color);
+    padding-inline: 0.5rem;
+    padding-block: 0.2rem;
+    line-height: 1;
+    transition: all 0.5s ease-in-out;
+    font-size: 2.0em;
+}
+
+
+.code{
+    margin-top: -0.7em;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-block: 0.5rem;
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%,
+                                      rgba(232, 102, 236, 0.6) 100%);
+    display: flex;
+    flex: 1;
+    align-items:center;
+    font-size: 1.0em;
+    font-family: monospace;
+    color: var(--default-color);
+    tab-size: 2;
+    white-space: pre-wrap;
+}
+
+
+.code:active{
+     user-select: all;
+}
+
+footer{
+    text-align: center;
+    color: var(--primary-color);
+    padding-bottom: 1rem; 
+    font-size: var(--fs-footer);
+}
+
+footer span{
+    color:red;
+}
+
+@media screen and (min-width: 768px){ 
+        main{
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-columns: 48% 48%; */
+            column-gap: calc(2 * 0.5rem);
+        }
+        header{
+            font-size: var(--fs-header-tablet);
+        }
+        .code-card{
+            font-size: var(--fs-code-card-tablet);
+        }
+}
+
+@media screen and (min-width: 992px){ 
+    main{
+        /* grid-template-columns: 31% 31% 31%; */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    header{
+        width: 75%;
+        margin: auto;
+        font-size:var(--fs-header-desktop);
+    }
+    .code-card{
+        font-size: var(--fs-code-card-desktop);
+    }
+
+@media (min-width: 1476px){
+    
+}
+}
