@@ -1,8 +1,8 @@
-# Module 02 Mini-Project: CSS Snippet Cheat Sheet
+# CSS Snippet Cheat Sheet
 
-In this activity, you will work with a group to build a webpage that will hold a collection of CSS snippets. What better way to learn CSS than to build a knowledge base of CSS?
+The CSS Snippet Cheat Sheet is a webpage that holds a collection of CSS snippets. What better way to learn CSS than to build a knowledge base of CSS? It was built as a part of module 02 mini-project for edX coding bootcamp at the University of Sydney in 2023.
 
-## Instructions
+## Requirements
 
 The completed application should meet the following criteria:
 
@@ -48,9 +48,6 @@ The completed application should meet the following criteria:
 
 * The HTML `<pre>` element is very literal about spaces and indentation. To gain a better understanding of how to work with it, check out this article on [considerations for styling the pre tag](https://css-tricks.com/considerations-styling-pre-tag/).
 
-## 🏆 Bonus
+## Deployed Application
+[Link to deployed CSS Snippet Cheat Sheet](https://simplesuyash.github.io/code-snippet/)
 
-* Set this project up in your own GitHub repositories so that you can deploy and use it for future reference!
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
